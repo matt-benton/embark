@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Livewire\Register;
 use App\Http\Livewire\Dashboard;
 use App\Http\Livewire\Login;
+use App\Http\Livewire\CreateGoal;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,4 +30,8 @@ Route::middleware(['guest'])->group(function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::prefix('goals')->name('goals.')->group(function () {
+        Route::get('create', CreateGoal::class)->name('create');
+    });
 });
