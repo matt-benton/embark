@@ -22,12 +22,19 @@ class EditGoal extends Component
         return view('livewire.edit-goal');
     }
 
-    public function submit()
+    public function update()
     {
         $this->validate();
 
         $this->goal->save();
 
         return redirect()->route('goals.show', ['goal' => $this->goal]); 
+    }
+
+    public function delete()
+    {
+        $this->goal->delete();
+
+        return redirect()->route('dashboard');
     }
 }
