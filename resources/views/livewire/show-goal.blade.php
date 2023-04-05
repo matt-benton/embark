@@ -5,8 +5,15 @@
     <h3>Objectives</h3>
     <ul>
         @foreach ($goal->objectives as $objective)
-            <li>{{ $objective->name }}</li>
+            <li><livewire:objective-card :objective="$objective" /></li>
         @endforeach
     </ul>
     @livewire('objective-form', ['goal' => $goal])
+
+    <h3>Completed</h3>
+    <ul>
+        @foreach ($completedObjectives as $completed)
+            <li>{{ $completed->name }} {{ $completed->completed_at }}</li>
+        @endforeach
+    </ul>
 </div>

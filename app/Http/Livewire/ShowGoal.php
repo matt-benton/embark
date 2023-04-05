@@ -8,6 +8,7 @@ use App\Models\Goal;
 class ShowGoal extends Component
 {
     public Goal $goal;
+    public $completedObjectives;
 
     public function render()
     {
@@ -16,6 +17,7 @@ class ShowGoal extends Component
 
     public function mount()
     {
-        $this->goal->load('objectives');
+        $this->goal->load(['objectives' => fn($query) => $query->incomplete()->get()]);
+        $this->completedObjectives = $this->goal->objectives()->complete()->get(); 
     } 
 }
