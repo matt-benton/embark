@@ -13,4 +13,9 @@ class ShowGoal extends Component
     {
         return view('livewire.show-goal');
     }
+
+    public function mount()
+    {
+        $this->goal->load('objectives');
+    } 
 }
