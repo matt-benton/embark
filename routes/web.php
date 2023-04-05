@@ -8,6 +8,7 @@ use App\Http\Livewire\Login;
 use App\Http\Livewire\CreateGoal;
 use App\Http\Livewire\ShowGoal;
 use App\Http\Livewire\EditGoal;
+use App\Http\Livewire\ShowObjective;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,5 +38,9 @@ Route::middleware(['auth'])->group(function () {
         Route::get('create', CreateGoal::class)->name('create');
         Route::get('{goal}', ShowGoal::class)->name('show');
         Route::get('{goal}/edit', EditGoal::class)->name('edit');
+    });
+
+    Route::prefix('objectives')->name('objectives.')->group(function () {
+        Route::get('{objective}', ShowObjective::class)->name('show');
     });
 });
