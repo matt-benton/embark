@@ -1,11 +1,13 @@
 <div>
-    <ul>
+    <ul id="goals-list">
         @foreach ($goals as $goal)
             <li>
-                <h3>
-                    <a href="{{ route('goals.show', ['goal' => $goal]) }}">{{ $goal->name }}</a>
-                </h3>
-                <p>{{ $goal->description }}</p>
+                <div class="goal-card">
+                    <h3>
+                        <a href="{{ route('goals.show', ['goal' => $goal]) }}">{{ $goal->name }}</a>
+                    </h3>
+                    <p>{{ $goal->description }}</p>
+                </div>
             </li>
         @endforeach
     </ul>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link href="/css/app.css" rel="stylesheet">
         <title>
             @isset ($title)
                 {{ $title }} | {{ config('app.name') }}
@@ -14,7 +14,9 @@
         @livewireStyles
     </head>
     <body>
-        {{ $slot }}
+        <div class="narrow-content">
+            {{ $slot }}
+        </div>
 
         @livewireScripts
     </body>

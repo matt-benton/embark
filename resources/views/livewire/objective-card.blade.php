@@ -3,7 +3,7 @@
         {{ $objective->name }}
     </a>
 
-    <ul>
+    <ul class="objective-subtask-list">
         @foreach ($objective->subtasks as $subtask)
             <li>{{ $subtask->name }}</li>
         @endforeach
