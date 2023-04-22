@@ -29,4 +29,13 @@ class ShowObjective extends Component
 
         return redirect()->route('objectives.show', ['objective' => $this->objective]);
     }
+
+    public function deleteSubtask(Subtask $subtask)
+    {
+        // need authorization
+
+        $subtask->delete();
+
+        return redirect()->route('objectives.show', ['objective' => $this->objective]);
+    }
 }

@@ -8,6 +8,9 @@
                     <button wire:click.prevent="completeSubtask({{ $subtask }})" class="icon-btn btn-transparent">
                         <livewire:icons.check-icon>
                     </button>
+                    <button wire:click.prevent="deleteSubtask({{ $subtask }})" class="icon-btn btn-transparent">
+                        <livewire:icons.trash-icon>
+                    </button>
                 </div>
             </li>
         @endforeach
