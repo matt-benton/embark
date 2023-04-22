@@ -14,6 +14,11 @@
         @livewireStyles
     </head>
     <body>
+        <nav>
+            <a href="/dashboard">
+                <livewire:icons.house-icon>
+            </a>
+        </nav>
         <div class="narrow-content">
             {{ $slot }}
         </div>
