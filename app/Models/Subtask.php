@@ -24,6 +24,12 @@ class Subtask extends Model
         $this->save();
     }
 
+    public function uncomplete(): void
+    {
+        $this->completed_at = null;
+        $this->save();
+    }
+
     public function scopeComplete(Builder $query): void
     {
         $query->whereNotNull('completed_at');

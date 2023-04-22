@@ -38,4 +38,13 @@ class ShowObjective extends Component
 
         return redirect()->route('objectives.show', ['objective' => $this->objective]);
     }
+
+    public function uncompleteSubtask(Subtask $subtask)
+    {
+        // needs auth
+        
+        $subtask->uncomplete();
+
+        return redirect()->route('objectives.show', ['objective' => $this->objective]);
+    }
 }

@@ -19,7 +19,14 @@
     <h3>Completed</h3>
     <ul class="objectives-list">
         @foreach ($completedSubtasks as $completed)
-            <li>{{ $completed->name }} {{ $completed->completed_at }}</li>
+            <li>
+                {{ $completed->name }}
+                <div class="objective-actions">
+                    <button wire:click.prevent="uncompleteSubtask({{ $completed }})" class="icon-btn btn-transparent">
+                        <livewire:icons.x-circle-icon>
+                    </button>
+                </div>
+            </li>
         @endforeach
     </ul>
 </div>
