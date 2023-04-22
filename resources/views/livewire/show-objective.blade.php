@@ -4,9 +4,11 @@
         @foreach ($objective->subtasks as $subtask)
             <li>
                 {{ $subtask->name }}
-                <button wire:click.prevent="completeSubtask({{ $subtask }})">
-                    Complete
-                </button>
+                <div class="objective-actions">
+                    <button wire:click.prevent="completeSubtask({{ $subtask }})" class="icon-btn btn-transparent">
+                        <livewire:icons.check-icon>
+                    </button>
+                </div>
             </li>
         @endforeach
     </ul>
