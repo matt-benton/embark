@@ -1,4 +1,5 @@
 @import './variables.css';
+@import './components/objective-card.css';
 
 :root {
     font-size: 62.5%;
@@ -13,13 +14,22 @@ body {
     font-size: var(--text-base);
     background-color: var(--backgroundColor);
     margin: var(--sp-1) auto;
-    padding: 0 var(--sp-3) 500px var(--sp-3);
+    padding: var(--sp-7) var(--sp-3) 500px var(--sp-3);
     max-width: 1200px;
 }
 
 .narrow-content {
     margin: 0 auto;
     max-width: 400px;
+}
+
+.row {
+    margin: var(--sp-5) 0;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: var(--sp-2);
+    margin-bottom: var(--sp-3);
 }
 
 a {
@@ -167,9 +177,6 @@ button svg {
     padding: var(--sp-3);
 }
 
-.objective-subtask-list {
-    padding: var(--sp-2) var(--sp-1) var(--sp-2) var(--sp-5);
-}
 
 .objective-actions {
     display: flex;

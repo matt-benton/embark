@@ -1,0 +1,7 @@
+.objective-subtask-list {
+    padding: var(--sp-2) var(--sp-1) var(--sp-2) var(--sp-5);
+}
+
+.objective-subtask-list li {
+    margin-bottom: var(--sp-3);
+}

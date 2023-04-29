@@ -1,7 +1,9 @@
-<div>
+<div class="objective-card">
+    <h4>
     <a href="{{ route('objectives.show', ['objective' => $objective]) }}">
         {{ $objective->name }}
     </a>
+    </h4>
 
     <ul class="objective-subtask-list">
         @foreach ($objective->subtasks as $subtask)
